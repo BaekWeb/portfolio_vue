@@ -1,12 +1,9 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
+import work from './modules/workInfo'
+
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    work
   }
-})
+});

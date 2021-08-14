@@ -2,7 +2,7 @@
   <section class="header">
     <div class="content">
       <h1 class="logo">
-        <a href="">
+        <a href="#">
           <img src="@/assets/images/icon/logo.png" alt="로고">
         </a>
       </h1>
