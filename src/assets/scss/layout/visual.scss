@@ -8,6 +8,7 @@
   height: 100vh;
   color: $white;
   background: url('~@/assets/images/common/visual.jpg') no-repeat center;
+  background-size: cover;
   
   .content {
     @include setPosition(absolute, 0, auto, auto, 0, 90);

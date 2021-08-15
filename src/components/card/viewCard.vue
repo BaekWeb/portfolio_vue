@@ -19,19 +19,7 @@
 
 <script>
 export default {
-  data() {
-    return [
-      {
-        bg: '@/assets/images/common/portfolio.jpg'
-      }
-    ]
-  },
   props: ['workItem'],
-  computed: {
-    bgImg() {
-      return 
-    }
-  }
 }
 </script>
 
