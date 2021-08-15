@@ -5,11 +5,43 @@
     slidesPerView="auto"
     :spaceBetween="40"
     :loop="true"
+    :pagination="{
+      el: '.pageNumber',
+      type: 'fraction',
+    }"
+    :navigation="{
+      prevEl: '.view_prev',
+      nextEl: '.view_next',
+    }"
+    :breakpoints="{
+      '767': {
+        spaceBetween: 20,
+      },
+      '424': {
+        spaceBetween: 20,
+      },
+      '280': {
+        spaceBetween: 10,
+      },
+    }"
     class="viewSwiper">
       <swiper-slide class="item" v-for="workItem in workItem" :key="workItem">
-          <ViewCard :workItem="workItem" />
-        </swiper-slide>
-      </swiper>
+        <ViewCard :workItem="workItem" />
+      </swiper-slide>
+    </swiper>
+
+    <ul class="viewButton">
+      <li class="view_prev">
+        <span class="blind">prev</span>
+      </li>
+      <li class="pageNumber">
+        <span class="swiper-pagination-current"></span>
+        <span class="swiper-pagination-total"></span>
+      </li>
+      <li class="view_next">
+        <span class="blind">next</span>
+      </li>
+    </ul>
   </section>
 </template>
 
