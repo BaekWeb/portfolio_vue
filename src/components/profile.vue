@@ -62,7 +62,7 @@ export default {
               iconAlt: '깃허브 가기',
             },
           ],
-          link: 'github.com'
+          link: 'https://github.com/seunginbeak'
         }
       ]
     }
@@ -91,7 +91,7 @@ export default {
       position: relative;
       flex: 1;
       width: 100%;
-      background: url("~@/assets/images/common/hansot.jpg") no-repeat center;
+      background: url("~@/assets/images/common/profile.jpg") no-repeat center;
       background-size: cover;
       text-indent: -10000rem;
 
