@@ -59,7 +59,7 @@ export default {
   }
 
   .box {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 6rem 1rem;
     box-sizing: border-box;
     p {
       @include font-m;
