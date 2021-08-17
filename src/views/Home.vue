@@ -4,6 +4,7 @@
     <Visual/>
     <About/>
     <Skill/>
+    <Work/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from "@/components/header.vue";
 import Visual from "@/components/visual.vue";
 import About from "@/components/about.vue";
 import Skill from "@/components/skill.vue";
+import Work from "@/components/work.vue";
 
 export default {
   name: 'Home',
@@ -19,7 +21,8 @@ export default {
     Header,
     Visual,
     About,
-    Skill
+    Skill,
+    Work
   }
 }
 </script>

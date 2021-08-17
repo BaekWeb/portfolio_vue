@@ -50,7 +50,7 @@ $mob-galaxyFold-width: 280px;
 
 /*                 mobile                   */
 @mixin mo-lg {
-	@media screen and (max-width: #{$tablet-s-width}) {
+	@media screen and (max-width: #{$tablet-s-width + 1}) {
 		@content;
 	}
 }
