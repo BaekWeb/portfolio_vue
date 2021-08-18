@@ -1,5 +1,5 @@
 <template>
-  <section class="header">
+  <header class="header">
     <div class="content">
       <h1 class="logo">
         <a href="#">
@@ -13,7 +13,7 @@
         <li>3</li>
       </ul>
     </div>
-  </section>
+  </header>
 </template>
 
 <script>

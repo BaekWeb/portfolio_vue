@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/*
+  footer style
+*/
+.footer {
+  max-width: 64rem;
+  margin: 6rem auto 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  .content {
+    padding: 0 6rem;
+    background-color: rgb(231, 231, 231);
+    border-radius: 1rem 1rem 0 0;
+
+    .main {
+      @include setFlex(flex, center, normal);
+      gap: 40px;
+      
+      .text {
+        @include setFlex(flex, space-between, flex-start);
+        flex-flow: column;
+        flex: 1;
+        padding: 40px 0;
+  
+        > p {
+          @include font-m;
+          line-height: 32px;
+        }
+  
+        > strong {
+          @include font-m;
+  
+          > span {
+            @include font-s;
+            display: block;
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  
+    .copyright {
+      @include font-m;
+      margin: 40px 0 0 0;
+      padding: 40px 0;
+      font-weight: 700;
+      text-align: center;
+      border-top: 1px solid $white2;
+    }
+  }
+
+}
