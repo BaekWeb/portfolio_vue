@@ -11,8 +11,13 @@
         <legend class="blind">메일보내기</legend>
 
         <ul class="contentBox">
-          <li v-for="mail in mail" :key="mail">
+          <li v-for="mail in mail" :key="mail" >
             <label :for="mail.id" class="blind">{{mail.label}}</label>
+
+            <i class="icon">
+              <img :src="mail.icon[0].iconSrc" :alt="mail.icon[0].iconAlt">
+            </i>
+
             <input 
               :id="mail.id"
               :type="mail.type"
@@ -25,7 +30,7 @@
             <textarea name="message" id="message" rows="5" placeholder="보내실 내용을 입력해주세요" resize="off"></textarea>
           </li>
           <li>
-            <button type="submit">보내기</button>
+            <button type="submit" class="buttonBox">보내기</button>
           </li>
         </ul>
       </fieldset>
@@ -58,6 +63,12 @@ export default {
           name: 'form_name',
           placeholder: "your name",
           label: "Your Name",
+          icon: [
+            {
+              iconSrc: require('@/assets/images/icon/user_w.png'),
+              iconAlt: '메일보내기',
+            }
+          ]
         },
         {
           id: 'formPhone',
@@ -65,6 +76,12 @@ export default {
           name: 'form_phone',
           placeholder: "your phone",
           label: "Your Phone",
+          icon: [
+            {
+              iconSrc: require('@/assets/images/icon/phone_w.png'),
+              iconAlt: '전화 아이콘',
+            }
+          ]
         },
         {
           id: 'formEmail',
@@ -72,6 +89,12 @@ export default {
           name: 'form_email',
           placeholder: "your email",
           label: "Your Email",
+          icon: [
+            {
+              iconSrc: require('@/assets/images/icon/email_w.png'),
+              iconAlt: '메일 아이콘',
+            }
+          ]
         },
       ]
     }
@@ -131,13 +154,12 @@ export default {
 @import "~@/assets/scss/main.scss";
 
 .mailCard {
-  width: 450px;
-  height: 550px;
+  width: 22.5rem;
   margin: -6rem 0 0 0;
-  padding: 20px;
+  padding: 1rem;
   box-sizing: border-box;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px $black2;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem $black2;
   color: $white;
   background-color: $black;
 
@@ -147,8 +169,8 @@ export default {
   }
 
   .contact-form {
-    margin: 20px 0;
-    padding: 20px 0;
+    margin: 1rem 0 0 0;
+    padding: 1rem 0 0 0;
     border-top: 1px solid $white2;
 
     fieldset {
@@ -157,10 +179,11 @@ export default {
       border: none;
 
       .contentBox {
-
+        // li 전체
         li {
+          position: relative;
           width: 100%;
-          margin: 0 0 20px 0;
+          margin: 0 0 1rem 0;
 
           label {
             @include font-m;
@@ -168,12 +191,23 @@ export default {
             text-align: center;
           }
 
+          .icon {
+            @include setPosition(absolute, 50%, auto, auto, 0.75rem, 90);
+            transform: translate(0, -50%);
+            width: 0.8rem;
+            height: 0.8rem;
+
+            img {
+              width: 100%
+            }
+          }
+
           input,
           textarea {
             @include font-m;
             width: 100%;
             border: 1px solid $white;
-            border-radius: 20px;
+            border-radius: 1rem;
             box-sizing: border-box;
             color: $white;
             background-color: $trans;
@@ -186,13 +220,113 @@ export default {
           }
           
           input {
-            height: 40px;
-            padding: 5px 40px;
+            height: 2rem;
+            padding: 0.25rem 2.2rem;
           }
 
           textarea {
-            margin: 10px 0 0 0;
-            padding: 20px;
+            margin: 0.5rem 0 0 0;
+            padding: 1rem;
+          }
+
+          button[type="submit"] {
+            color: $white; 
+          }
+        }
+      }
+    }
+  }
+}
+
+// tablet
+@include tablet {
+  .mailCard {
+    display: inline-block;
+    margin: -6rem 0 0 0;
+
+    .logo {
+      width: max-content;
+      margin: 0 auto;
+    }
+  }
+}
+
+// mo
+@include mo-lg {
+  .mailCard {
+    width: 100%;
+    display: inline-block;
+    margin: -4rem auto 0 auto;
+
+    .logo {
+      width: max-content;
+      margin: 0 auto;
+    }
+
+    .contact-form {
+      margin: 1rem 0 0 0;
+      padding: 1rem 0 0 0;
+      border-top: 1px solid $white2;
+
+      fieldset {
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        .contentBox {
+          // li 전체
+          li {
+            position: relative;
+            width: 100%;
+            margin: 0 0 1rem 0;
+
+            label {
+              @include font-m;
+              display: block;
+              text-align: center;
+            }
+
+            .icon {
+              @include setPosition(absolute, 50%, auto, auto, 0.75rem, 90);
+              transform: translate(0, -50%);
+              width: 0.8rem;
+              height: 0.8rem;
+
+              img {
+                width: 100%
+              }
+            }
+
+            input,
+            textarea {
+              @include font-m;
+              width: 100%;
+              border: 1px solid $white;
+              border-radius: 1rem;
+              box-sizing: border-box;
+              color: $white;
+              background-color: $trans;
+              resize: none;
+
+              &::placeholder {
+                @include font-s;
+                color: $white;
+              }
+            }
+            
+            input {
+              height: 2rem;
+              padding: 0.25rem 2.2rem;
+            }
+
+            textarea {
+              margin: 0.5rem 0 0 0;
+              padding: 1rem;
+            }
+
+            button[type="submit"] {
+              color: $white; 
+            }
           }
         }
       }

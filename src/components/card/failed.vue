@@ -14,7 +14,7 @@
           >
       </div>
       <p class="invalid">메시지 발송이 실패하였습니다.</p>
-      <button class="close" @click="close">close</button>
+      <button class="close buttonBox" @click="close">Close</button>
     </div>
   </div>
 </template>

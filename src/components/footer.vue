@@ -11,12 +11,16 @@
             앞으로도 꾸준히 발전하는 웹 퍼블리셔가 되겠습니다.
           </p>
 
-          <strong>
-            궁금한 점이 있으시다면?
-            <span>
-              옆에 내용을 채워 보내주세요
-            </span>
-          </strong>
+          <div>
+            <strong>
+              궁금한 점이 있으시다면?
+            </strong>
+            <p>
+              내용을 채워 보내주세요. <br>
+              비어있는 내용이 있으면, <br>
+              메일발송이 되지 않습니다.
+            </p>
+          </div>
         </article>
       </section>
       <section class="copyright">

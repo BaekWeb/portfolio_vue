@@ -30,3 +30,19 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #FA3B3B;
 }
+
+.buttonBox {
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 20px;
+  background: transparent;
+  transition: 0.5s;
+}
+
+.buttonBox:hover {
+  background: #FA3B3B;
+}
