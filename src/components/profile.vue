@@ -62,7 +62,7 @@ export default {
               iconAlt: '깃허브 가기',
             },
           ],
-          link: 'https://github.com/seunginbeak'
+          link: 'https://github.com/baek-web'
         }
       ]
     }
@@ -87,6 +87,14 @@ export default {
     overflow: hidden;
     box-shadow: 0.2rem 0.2rem 0.2rem $black2;
 
+    &:hover {
+      .mainImg {
+        .icon {
+          opacity: 1;
+        }
+      }
+    }
+
     .mainImg {
       position: relative;
       flex: 1;
@@ -100,6 +108,8 @@ export default {
         @include setFlex(flex, center, center);
         column-gap: 1rem;
         background-color: $black2;
+        opacity: 0;
+        transition: 1s;
 
         > li {
           position: relative;

@@ -1,10 +1,12 @@
 <template>
   <article class="workCard">
     <div class="mainImg">
-      <img
-      :src="workCard.mainImg[0].src"
-      :alt="workCard.mainImg[0].alt"
-      :style="{transform: workCard.mainImg[0].transform}">
+      <a :href="workCard.siteLink">
+        <img
+        :src="workCard.mainImg[0].src"
+        :alt="workCard.mainImg[0].alt"
+        :style="{transform: workCard.mainImg[0].transform}">
+      </a>
     </div>
 
     <div class="backContent">

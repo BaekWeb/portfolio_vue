@@ -7,18 +7,34 @@
         </a>
       </h1>
 
-      <ul class="burgerMenu">
+      <ul class="burgerMenu" @click="menuToggle">
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
     </div>
+    <SideMenu :toggle="toggle" @menuClose="menuToggle"/>
   </header>
 </template>
 
 <script>
-export default {
+import SideMenu from "@/components/sideMenu.vue";
 
+
+export default {
+  data() {
+    return {
+      toggle: false,
+    }
+  },
+  components: {
+    SideMenu,
+  },
+  methods: {
+    menuToggle(menuClose) {
+      this.toggle = menuClose;
+    }
+  }
 }
 </script>
 
